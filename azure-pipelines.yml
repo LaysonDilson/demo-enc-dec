@@ -3,7 +3,6 @@ stages:
   jobs:
   - job: BuildJob
     steps:
-    - script: echo buildando.
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
@@ -18,7 +17,6 @@ stages:
         sonarQubeRunAnalysis: false
         checkStyleRunAnalysis: true
         findBugsRunAnalysis: true
-    - script: echo buildado.
 - stage: Test
   jobs:
   - job: TestOnWindows
