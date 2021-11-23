@@ -3,7 +3,7 @@ stages:
   jobs:
   - job: BuildJob
     steps:
-    - script: echo buildado.
+    - script: echo buildando.
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
