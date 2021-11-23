@@ -6,14 +6,11 @@ stages:
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
+        goals: 'test'
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
-        testRunTitle: 'Teste case'
-        codeCoverageToolOption: 'Cobertura'
         javaHomeOption: 'JDKVersion'
         mavenVersionOption: 'Default'
         mavenAuthenticateFeed: false
         effectivePomSkip: false
         sonarQubeRunAnalysis: false
-        checkStyleRunAnalysis: true
-        findBugsRunAnalysis: true
