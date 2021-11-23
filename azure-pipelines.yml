@@ -4,6 +4,7 @@ stages:
   - job: BuildJob
     steps:
     - task: Maven@3
+      displayName: Build Maven
       inputs:
         mavenPomFile: 'pom.xml'
         goals: 'test'
